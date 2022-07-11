@@ -1,0 +1,32 @@
+.container{
+    position: relative;
+    background-color: #b2c5b8;
+    border-radius: 10px;
+    margin:auto;
+    padding: 15px 10px 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 390px;
+    box-sizing: border-box;
+    
+   
+  }
+  .registrationbackimage{
+  
+  background-image: url(./eventimages/addeventform.jpg);
+  background-position:center;
+  background-size:contain;
+  font-family: 'Trebuchet MS', sans-serif;
+  font: size 11px;
+  
+  }
+  .registrationforevent{
+  
+  width: 299px;
+  background-color: rgba(26, 114, 39, 0.6);
+  margin: auto;
+  color: #ffffff;
+  padding:10px 0px 10px 0px;
+  text-align: center;
+  border-radius: 15px 15px 0px 0px;
+  
+  }

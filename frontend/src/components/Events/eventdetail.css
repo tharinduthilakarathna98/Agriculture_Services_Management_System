@@ -1,0 +1,122 @@
+@font-face { 
+    font-family: "Arvo-Regular";
+     }
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  
+  .detailbackgroundfont {
+    font-family: "Arvo-Regular";
+    font-size: 15px;
+    color: rgb(18, 16, 16);
+    margin: 0; }
+  
+  :focus {
+    outline: none; }
+  
+  textarea {
+    resize: none; }
+  
+  input, textarea, select, button {
+    font-size: 15px;
+    color: #fff; }
+  
+  p, h1, h2, h3, h4, h5, h6, ul {
+    margin: 0; }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  
+  a {
+    text-decoration: none; }
+  
+  textarea {
+    resize: none; }
+  
+  img {
+    max-width: 100%;
+    vertical-align: middle; }
+  
+  .wrapper {
+    height: 100vh;
+    display: flex; }
+    .wrapper .image-holder {
+      width: 65.78%; }
+    .wrapper .form-content {
+      width: 34.22%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 4.3%;
+      padding-right: 4.3%;
+      position: relative; }
+  
+  .wizard {
+    height: 509px; }
+  
+  .steps .current-info, .steps .number {
+    display: none; }
+  
+  .steps ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px; }
+  
+  .steps li a {
+    display: block; }
+  .steps li .step-arrow {
+    display: block;
+    margin-top: 3px;
+    margin-left: 32%; }
+  .steps li:nth-child(2) .step-arrow, .steps li:last-child .step-arrow {
+    margin-left: 57%; }
+  
+  h3 {
+    font-size: 32px;
+    color: rgb(8, 6, 6);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 58px; }
+  
+  .image-holder {
+    background: url("./eventimages/agri4.jpg") center center;
+    background-size: cover; }
+    .image-holder img {
+      display: none; }
+  
+  .form-content{
+    background: url("./eventimages/green.jpg") center center;
+    background-size: cover; }
+  
+  .info1 {
+    margin-bottom: 50px; }
+  
+  .info-item1 {
+    margin-bottom: 29px; }
+    .info-item span {
+      color: rgb(0, 0, 0); }
+      .info-item span.unit {
+        margin-right: 15px; }
+      .info-item span.lnr {
+        margin-right: 4px; }
+      .info-item span.lnr-calendar-full {
+        margin-right: 7px; }
+  
+  .content h4 {
+    display: none; }
+  
+  .form-group {
+    display: flex;
+    margin-bottom: 15px; }
+    .form-group .form-price {
+      width: 65.46%; }
+    .form-group .form-select {
+      width: 34.54%; }
+  
+  label {
+    color: rgb(14, 11, 11); }
+
+    

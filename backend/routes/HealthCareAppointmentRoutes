@@ -1,0 +1,93 @@
+const express = require("express");
+const PostAppointment = require("../models/HealthCareM/HAppointmentModel");
+
+const router = express.Router();
+
+//Add Appointments
+
+
+router.post('/add',(req,res) =>{
+    let newPost = new PostAppointment(req.body);
+    newPost.save((err) =>{
+        if(err){
+            return res.status(400).json({
+                error:err
+            });
+        }
+        return res.status(200).json({
+            success: "Appointment Saved Successfully"
+        });
+    });
+});
+
+//Get Appointment
+
+router.get('/read',(req,res)=>{
+    PostAppointment.find().exec((err,PostAppointment)=>{
+        if(err){
+            return res.status(400).json({
+                error:err
+            });
+
+        }
+        return res.status(200).json({
+            success:true,
+            existingPosts: PostAppointment
+        });
+    });
+});
+
+//Delete Appointments
+router.delete('/delete/:id',(req,res)=>{
+    PostAppointment.findByIdAndRemove(req.params.id).exec((err,deletePro)=>{
+        if(err) return res.status(400).json({
+            message:"Deleted Unsuccess",err
+        });
+        return res.json({
+            message:"Delete success",deletePro
+        });
+    });
+});
+
+//Update Appointments
+router.put('/update/:id',(req,res)=>{
+    PostAppointment.findByIdAndUpdate(
+        req.params.id,{
+            $set:req.body
+        },
+        (err,updatePrp)=>{
+            if(err){
+                if(err){
+                    return res.status(400).json({error:err});
+                }
+                return res.status(200).json({
+                    success:"Updated Product"
+                });
+            }
+        }
+    );
+});
+
+//get a specific post
+
+router.get("/post/:id",(req,res)=>{
+
+    let postId = req.params.id;
+
+    Posts.findById(postId,(err,post) =>{
+        if(err){
+            return res.status(400).json({success:false ,err});
+        }
+
+        return res.status(200).json({
+            success:true,
+            post
+        });
+    });
+
+});
+
+
+
+module.exports = router;
+
